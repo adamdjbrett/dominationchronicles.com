@@ -1,7 +1,1 @@
-# Cloudflare Pages redirects - full domain redirect to YouTube channel
-# Redirect both apex and www (and any paths) to the YouTube handle
-https://dominationchronicles.com/*      https://www.youtube.com/@DominationChronicles  301!
-https://www.dominationchronicles.com/*  https://www.youtube.com/@DominationChronicles  301!
-
-# Explanation:
-# 301! forces redirect (even if Page exists). All paths collapse to channel homepage.
+/*      https://www.youtube.com/@DominationChronicles  301!
