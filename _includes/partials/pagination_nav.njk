@@ -1,0 +1,26 @@
+{% if pagination.pages.length > 1 %}
+    <nav aria-label="Episode Pagination" class="d-flex justify-content-center mt-5 pagination-container">
+        <ul class="pagination">
+            <li class="page-item {% if pagination.previousPageHref == null %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination.previousPageHref or '#' }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo; Previous</span>
+                </a>
+            </li>
+            {% for page in pagination.pages %}
+                <li class="page-item {% if page == pagination.hrefs[pagination.pageNumber] %}active{% endif %}"
+                    {% if page == pagination.hrefs[pagination.pageNumber] %}aria-current="page"{% endif %}>
+                    {% set pageIndex = loop.index0 %}
+                    <a class="page-link" href="{{ page }}">
+                        {{ pageIndex + 1 }}
+                    </a>
+                </li>
+            {% endfor %}
+            <li class="page-item {% if pagination.nextPageHref == null %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination.nextPageHref or '#' }}" aria-label="Next">
+                    <span aria-hidden="true">Next &raquo;</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+{% endif %}

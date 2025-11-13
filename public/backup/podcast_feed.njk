@@ -1,0 +1,26 @@
+<section id="podcast-feed-latest" class="py-5 container p-3">
+    <h2 class="display-6 text-center mb-4 bg-dark">{{ widget.rss.title }}</h2>
+    <p class="text-center text-secondary mb-5">{{ widget.rss.text }}</p>
+
+    <div id="podcast-feed-container" class="instagram-grid"> 
+        {%- if podcast and podcast.length > 0 -%}
+            {%- for episode in podcast -%}
+                <a href="{{ episode.url }}" class="podcast-feed-item" title="{{ episode.title }}">
+                     <img class="lazy-load-image"
+            src="https://placehold.co/300x300/2c2c2e/f5f5f7?text=Loading"
+            data-src="{{ episode.image }}" 
+            alt="Podcast Episode: {{ episode.title }}"
+            loading="lazy"
+        >
+                    <h3 class="lead">{{ episode.title }}</h3>
+                    <!-- test fetch data 
+                     <p>URL: {{ episode.url }}</p>
+                    <p>Image Data: {{ episode.image }}</p> 
+                -->
+                    <hr>
+                </a>
+            {%- endfor -%}
+        {%- else -%}
+        {%- endif -%}
+    </div>
+</section>

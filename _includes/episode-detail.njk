@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+
+<section class="py-5 mt-5">
+    <div class="container pt-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold mb-2">{{ title }}</h1>
+                <p class="lead text-accent mb-4 mt-3"><small>
+                    <span class="text-light">On </span> <time datetime="{{ page.date | htmlDateString }}">
+                     {{ page.date | readableDate }}</time>
+                     <span class="text-light">• Duration</span> {{ duration }}
+                </small></p>
+                {% include "partials/episodes/youtube_lite.njk" %}
+                <h2 class="lead fw-bold mb-3"><a href="{{page.url}}">{{description}}</a></h2>
+                {{ content | safe }}
+                {% include "partials/episodes/timestamp.njk" %}
+                {% include "partials/episodes/pagination.njk" %}
+            </div>
+            {% include "partials/sidebar.njk" %}
+        </div>
+    </div>
+</section>

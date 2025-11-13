@@ -1,0 +1,22 @@
+        {% if sidebar.show_host %} <div class="p-4 rounded shadow-sm mb-4 notes-card">
+                        <h3 class="fw-bold mb-3">{{widget.host.title}}</h3>
+                        <p>{{widget.host.description}}</p>
+                          {% for j in widget.host.list %}
+                            <div class="row">
+                    <div class="col-md-12 p-1 mb-3">
+                        <div class="text-center">
+                        <img src="{{j.image}}" data-src="{{j.image}}" width="120" height="120" 
+                        class="img-fluid rounded-circle about-img lazy-load-image mb-2" alt="{{j.name}}" loading="lazy"/>
+                        <h4 class="lead"><a href="{{j.page}}">{{j.name}}</a></h4>
+                        <p class="lead text-secondary"><small>{{j.about}}</small><br/>
+                         {% for s in j.social %}{% if s.title %}
+                                <a href="{{s.url}}" class="btn btn-link text-light me-3" title="{{s.title}}" 
+                                aria-label="{{s.title}}"><i class="{{s.icon}}"></i></a>
+                            {% endif %}{% endfor %}
+                        </p>
+                        </div>
+                        <p><small>{{j.text | md | safe }}</small></p>
+                    </div>
+                </div>       
+        {% endfor %}
+    </div>{% endif %}

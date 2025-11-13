@@ -1,0 +1,26 @@
+# show or hide  lastest episode on sidebar
+show_lastest_episode: true
+
+# show or hide  host widget on sidebar
+show_host: true
+
+# show or hide navbar data menu on sidebar
+show_page_menu: true
+
+# widget List
+list: 
+
+# List 1 example without menu 
+ - title: Domination Chronicles
+   text: "Domination Chronicles Podcast"
+   image: "/img/icon.webp"
+
+# List 2 example with menu
+ - title: About Us
+   text: "Here we go about us.."
+   image: 
+   menu: 
+     - text: Hello World
+       url: /
+     - text: Lorep Ipsum
+       url: /

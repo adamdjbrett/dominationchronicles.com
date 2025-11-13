@@ -1,0 +1,19 @@
+                {% if timestamps.length %}
+                <h3 class="fw-bold mt-5 mb-3">Timestamps</h3>
+                <div class="notes-card p-4 rounded shadow-sm">
+                    <ul class="list-unstyled mb-0">
+                        {% for stamp in timestamps %} 
+                        <li>
+                            <i class="bi bi-star-fill text-accent me-2"></i>
+                            <a 
+                                href="https://www.youtube.com/watch?v={{ videoId }}&t={{ stamp.time | timeToSeconds }}s" 
+                                target="_blank" 
+                                class="text-light"
+                            >
+                                <strong>{{ stamp.time }}:</strong> {{ stamp.note }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}

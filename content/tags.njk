@@ -1,0 +1,13 @@
+---
+title: Tag Index
+description: "find post faster and better."
+---
+<section>
+<h1>{{title}}</h1>
+<p>{{description}}</p>
+
+{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<p><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></p>
+{% endfor %}
+</section>

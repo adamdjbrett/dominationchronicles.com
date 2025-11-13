@@ -1,0 +1,44 @@
+    {% include "partials/banner.njk" %}
+    <footer class="pt-5 pb-3 bg-dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    {% if footer.image %}<img class="img-thumb lazy-load-image" 
+                    alt="{{metadata.title}}" 
+                    width="160" 
+                    height="160" 
+                    data-src="{{footer.image}}"
+                    src="{{footer.image}}"
+                    loading="lazy"/> {% endif %}
+                    <h3 class="navbar-brand fs-4">{{footer.title}}</h3>
+                    <p class="text-secondary">{{footer.text | md |safe}}</p>
+                </div>
+                <div class="col-md-2 col-6 p-3">
+                    <h3 class="text-uppercase mb-3 small">{{footer.menu1.title}}</h3>
+                    <ul class="list-unstyled footer-links">
+                        {% for s in footer.menu1.list %}<li><a href="{{s.url}}">{{s.title}}</a></li>{% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 p-3">
+                    <h3 class="text-uppercase mb-3 small">{{footer.menu2.title}}</h3>
+                    <ul class="list-unstyled footer-links">
+                        {% for j in footer.menu2.list %}<li><a href="{{j.url}}"><i class="{{j.icon}} me-2"></i> {{j.title}}</a></li>{% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-2 p-3">
+                    <h3 class="text-uppercase mb-3 small">{{footer.menu3.title}}</h3>
+                    <div class="d-flex">
+                        {% for k in footer.menu3.list %}<a href="{{k.url}}" title="{{k.title}}" 
+                        class="btn btn-outline-secondary btn-social me-2"
+                        target="_blank" rel="noreferrer"
+                        ><i class="{{k.icon}}"></i></a>{% endfor %}
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-secondary small">
+                &copy; <span id="tahun"></span> {{footer.copyrights}} built with <a href="https://11ty.dev" target="_blank">11ty</a> 
+                | managed by <a href="https://adamdjbrett.com">Adam DJ Brett</a>
+            </div>
+        </div>
+    </footer>

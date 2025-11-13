@@ -1,0 +1,26 @@
+title: "Domination Chronicles"
+description: "Domination Chronicles Podcast"
+image: "img/banner-full.jpg"
+language: "en"
+locale: en_US
+favicon: "/img/icon.webp"
+# production URL
+#url: ""
+# dev mode URL
+url: "http://localhost:8080"
+
+# Podcast RSS
+podcast_rss: 
+  url: https://feeds.bbci.co.uk/news/world/rss.xml
+
+
+# Metadata Social
+metasocial:
+  - facebook: https://www.facebook.com/user
+  - twitteruser: "@user"
+  - twitter: https://x.com/user
+
+# Author
+author: 
+ name: Adam Dj Brett
+ url: https://adamdjbrett.com

@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+    <section class="py-5 mt-5">
+        <div class="container pt-5">
+            <header class="text-center mb-5">
+            <div class="row">
+                {% if image %}<div class="col-md-3 mx-auto">
+                    <div class="ratio ratio-1x1 mb-5">
+                        <img class="img-fluid rounded-circle" 
+                        alt="{{title}}" width="100%" height="100%" 
+                        src="{{image}}"/>
+                    </div>
+                </div>{% endif %}
+                <h1 class="display-4 fw-bold"><a href="{{page.url}}">{{title}}</a></h1> 
+                <p class="lead text-secondary">{{description}}</p>
+            </header>
+            <div class="col-md-9 mx-auto p-3">
+                {{content|safe}}
+            </div>
+            </div>
+        </div>
+    </section>

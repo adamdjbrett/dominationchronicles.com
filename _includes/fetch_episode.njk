@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+<section class="py-5 mt-5">
+    <div class="container pt-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold mb-2">{{ episode.title }}</h1>
+                    {% if episode.description %}<h3>{{ episode.description | safe | md }}</h3>{% endif %}
+    <p class="text-secondary small">{{ episode.pubDate  }}</p>
+{% if episode.video %}
+    <video controls class="w-100 mb-4 rounded shadow-md" poster="{{ episode.image }}">
+        <source src="{{ episode.video }}" type="video/mp4"> 
+        <source src="{{ episode.video }}" type="video/webm"> 
+        Your browser not support video
+    </video>
+{% endif %}
+    {% if episode.audio %}
+        <audio controls class="w-100 mt-3">
+            <source src="{{ episode.audio }}" type="audio/mpeg">
+            Your browser not support audio
+        </audio>
+    {% endif %}
+      <img 
+            src="{{ episode.image }}" 
+            alt="Cover Episode: {{ episode.title }}" 
+            class="img-fluid rounded shadow mb-4"
+            style="max-width: 100%; height: auto;"
+        >
+                {{ content | safe }}
+                 <p>
+                 URL: <a href="{{ episode.originalUrl }}" target="_blank" rel="noopener noreferrer">{{ episode.originalUrl }}</a>
+            </p>
+                {% include "partials/episodes/pagination.njk" %}
+            </div>
+            {% include "partials/sidebar.njk" %}
+        </div>
+    </div>
+</section>

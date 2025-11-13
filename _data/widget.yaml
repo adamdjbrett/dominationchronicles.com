@@ -1,0 +1,59 @@
+# banner image
+banner: 
+  alt: "Domination Chronicles Youutbe"
+  image: /img/banner.webp
+  url: "https://www.youtube.com/@DominationChronicles"
+  show_banner: true
+
+# host widget
+host: 
+ title: "About Host"
+ description: "Domination Chronicles Host"
+ list: 
+    - name: "Peter d'Errico"
+      about: "About Peter d'Errico"
+      page: "/host/peter-d-erico/"
+      text: |
+         Peter d’Errico graduated from Yale Law School in 1968. He was an attorney at Dinébe’iiná Náhiiłna be Agha’diit’ahii, Navajo Legal Services, in Shiprock, 1968-1970.
+      image: "/img/peter-derrico.webp"
+      social: 
+        - title: Peter facebook
+          icon: fab fa-facebook
+          url: https://facebook.com
+        - title: Peter X
+          icon: fab fa-x-twitter
+          url: https://x.com
+    - name: "Steven T. Newcomb"
+      about: "About Steven T. Newcomb"
+      page: "/host/steven-t-newcomb"
+      text: |
+         Steven T. Newcomb (Shawnee/Lenape) has been researching the history of U.S. federal Indian law and policy for four decades.
+      image: "/img/steven.webp"
+      social: 
+        - title: Steven facebook
+          icon: fab fa-facebook
+          url: https://facebook.com
+        - title: Steven X
+          icon: fab fa-x-twitter
+          url: https://x.com
+
+# episode widget
+episode: 
+  title: "Episodes"
+  text: "Our Lastest Podcast Epsiodes"
+  button: Explore More
+  button_episodes: Play Epsiode
+
+# RSS widget
+rss: 
+  title: "Red Circle RSS"
+  text: "Red Circle RSS Fetch"
+
+# form widget and contact
+form: 
+ formspree_id: ""
+ title: Contact Form
+ button: "Send Message"
+ text: |
+   or you can sent email dirrectly on [info@domain.com](mailto:info@domain.com)
+

@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: mesinkasir/11ty-sveltia-pico
+  branch: main
+
+# The folder used to store uploaded images
+media_folder: "public/img"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    preview: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    preview: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    preview: false
+    folder: "content/page"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "metadata"
+    label: "Metadata"
+    preview: false
+    files:
+      - file: "_data/metadata.yaml"
+        label: "Site Metadata"
+        name: "site_metadata"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "string"}
+          - {label: "Language", name: "language", widget: "string"}
+          - {label: "Locale", name: "locale", widget: "string"}
+          - {label: "Favicon", name: "favicon", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+          - label: "Metasocial"
+            name: "metasocial"
+            widget: "list"
+            fields:
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "Twitter User", name: "twitteruser", widget: "string", required: false}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - label: "Navbar"
+            name: "navbar"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: "Navigation Label", name: "nav", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "GitHub", name: "github", widget: "string", required: false}
+              - {label: "X", name: "x", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+              - {label: "LinkedIn", name: "linked", widget: "string", required: false}
+              - {label: "Discord", name: "discord", widget: "string", required: false}
+              - {label: "RSS", name: "rss", widget: "string", required: false}

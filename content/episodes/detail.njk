@@ -1,0 +1,9 @@
+---
+layout: fetch_episode.njk
+eleventyExcludeFromCollections: true
+pagination: 
+  data: podcast 
+  size: 1
+  alias: episode
+permalink: "/episodes/{{ pagination.items[0].title | slugify | lower }}/index.html" 
+---

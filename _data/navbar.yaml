@@ -1,0 +1,22 @@
+title: Domination Chronicles
+icon: "/img/icon.webp"
+
+# For sidebar widget
+widget_title: Menu
+
+# Navbar List Menu
+list: 
+  - nav: Home
+    url: /
+  - nav: About
+    url: /about/
+  - nav: Episodes
+    url: /episodes/
+  - nav: Search
+    url: /search
+
+# Navbar Button
+button: 
+  show: true
+  text: Subscribe Now
+  url: https://www.youtube.com/@DominationChronicles

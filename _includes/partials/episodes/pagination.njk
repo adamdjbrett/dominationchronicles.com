@@ -1,0 +1,23 @@
+				{%- if collections.episodes %} {%- set previousPost = collections.episodes |
+				getPreviousCollectionItem %} {%- set nextPost = collections.episodes |
+				getNextCollectionItem %} {%- if nextPost or previousPost %}
+				<div class="d-flex justify-content-between flex-wrap row mt-5 mb-3">
+					<div class="mb-2 col-md-6">
+                    {%- if previousPost %}
+                    <a
+						href="{{ previousPost.url }}"
+						class="btn btn-outline-primary"
+					>
+						&larr; Prev Episode </a
+					>{% endif %}</div>
+                    <div class="mb-2 col-md-6 text-end">
+                     {%- if nextPost %}
+					<a
+						href="{{ nextPost.url }}"
+						class="btn btn-outline-primary"
+					>
+						Next Episode &rarr; </a
+					>{% endif %}
+                    </div>
+				</div>
+				{%- endif %} {%- endif %}

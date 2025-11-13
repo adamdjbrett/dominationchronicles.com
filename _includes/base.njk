@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+<meta name="viewport" content="width=device-width">
+{% include "partials/seo.njk" %}
+</head>
+<body>
+<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+{% include "partials/navbar.njk" %}
+<main class="container" id="main">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="/js/bs.js"></script>
+<script src="/js/script.js" defer></script>
+</body>
+</html> 

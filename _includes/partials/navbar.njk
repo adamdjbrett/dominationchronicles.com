@@ -1,0 +1,22 @@
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{metadata.url}}" title="{{metadata.title}}">
+                {% if navbar.icon %}<img class="img-fluid" alt="{{metadata.title}}" src="{{navbar.icon}}" 
+                width="80" height="80" loading="eager"/>
+                {% else %}{{navbar.title}}{% endif %}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    {% for n in navbar.list %}<li class="nav-item">
+                        <a class="nav-link" href="{{n.url}}">{{n.nav}}</a>
+                    </li>{% endfor %}
+                    {% if navbar.button.show %}<li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="{{navbar.button.url}}" role="button" 
+                        target="_blank" rel="noreferrer">{{navbar.button.text}}</a>
+                    </li>{% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>

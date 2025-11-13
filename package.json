@@ -1,0 +1,55 @@
+{
+	"name": "dominationchronicles",
+	"version": "0.0.1",
+	"description": "dominationchronicles project develop by adam dj brett.",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-sveltia-pico/",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-sveltia-pico/ --serve --quiet",
+		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/adamdjbrett/dominationchronicles.com.git"
+	},
+	"author": {
+		"name": "Adam DJ Brett",
+		"email": "info@adamdjbrett.com",
+		"url": "https://adamdjbrett.com/"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=20"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy-navigation": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+		"cross-env": "^7.0.3",
+		"luxon": "^3.7.2",
+		"markdown-it": "^14.1.0",
+		"markdown-it-attrs": "^4.3.1",
+		"prismjs": "^1.30.0",
+		"zod": "^3.25.67",
+		"zod-validation-error": "^3.5.2"
+	},
+	"dependencies": {
+		"@zachleat/heading-anchors": "^1.0.3",
+		"eleventy-plugin-youtube-embed": "^1.13.0",
+		"js-yaml": "^4.1.0",
+		"lite-youtube-embed": "^0.3.4",
+		"markdown-it": "^14.1.0",
+		"markdown-it-anchor": "^9.2.0",
+		"node-fetch": "^3.3.2",
+		"pagefind": "^1.4.0",
+		"rss-parser": "^3.13.0",
+		"transliteration": "^2.3.5"
+	}
+}
