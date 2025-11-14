@@ -30,7 +30,9 @@ Need Help or have project ?? Contact Me.
 
 14 Nov 2025
 + Improve for lighthouse
-+ Update contrast color
++ Fontawesome optimazation
++ Update contrast
++ Remove heavy font load
 + Implement Picture Source Lazy Load
 + Implement frequency high
 
@@ -40,7 +42,6 @@ Optional you can use timestamp.
 
 Implementation on episodes/*.md
 ```
-
 timestamps:
   - time: "00:00"
     note: Welcome and Opening.
