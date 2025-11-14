@@ -4,7 +4,7 @@ description: "Steve Newcomb and Peter d’Errico dig into Halverson v. Burgum, t
 image: /img/podcast/saysometing.avif
 duration: "1:04:32"
 publishDate: 2025-11-12
-videoId: 0gcJCQMKAYcqIYzv
+videoId: UfBY3EcsiTA
 tags: 
  - say something
  - see something
