@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     const navbar = document.querySelector('.navbar');
     if (navbar) { 
         const checkScroll = () => {
@@ -11,28 +12,54 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', checkScroll);
         checkScroll();
     }
-    const lazyImages = document.querySelectorAll('.lazy-load-image');
 
-    if (lazyImages.length > 0 && 'IntersectionObserver' in window) {
+    const lazyElements = document.querySelectorAll('.lazy-load-image, picture source');
+
+    if (lazyElements.length > 0 && 'IntersectionObserver' in window) {
         
+        const loadElement = (element) => {
+            const dataSrc = element.getAttribute('data-src');
+            const dataSrcSet = element.getAttribute('data-srcset');
+            const dataSizes = element.getAttribute('data-sizes');
+            
+            if (dataSrcSet) {
+                element.setAttribute('srcset', dataSrcSet);
+                element.removeAttribute('data-srcset');
+            }
+            if (dataSizes) {
+                element.setAttribute('sizes', dataSizes);
+                element.removeAttribute('data-sizes');
+            }
+            
+            if (element.tagName === 'IMG' && dataSrc) {
+                element.src = dataSrc; 
+                element.removeAttribute('data-src');
+                
+                // Hapus kelas setelah dimuat
+                element.classList.remove('lazy-load-image');
+            }
+        };
+
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const dataSrc = img.getAttribute('data-src');
-                    if (dataSrc) {
-                        img.src = dataSrc; 
-                        img.removeAttribute('data-src');
-                    }
-                    observer.unobserve(img);
+                    const element = entry.target;
+                    
+                    loadElement(element);
+                    
+                    observer.unobserve(element);
                 }
             });
         }, { 
-            rootMargin: '0px 0px 100px 0px' 
+            rootMargin: '0px 0px 200px 0px' 
         });
-        lazyImages.forEach(img => {
-            observer.observe(img);
+
+        lazyElements.forEach(element => {
+            observer.observe(element);
         });
     } 
+    const tahunElement = document.getElementById("tahun");
+    if (tahunElement) {
+        tahunElement.innerHTML = new Date().getFullYear();
+    }
 });
-document.getElementById("tahun").innerHTML = new Date().getFullYear();

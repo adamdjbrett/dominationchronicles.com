@@ -2,10 +2,11 @@
         <div class="container">
             <a class="navbar-brand" href="{{metadata.url}}" title="{{metadata.title}}">
                 {% if navbar.icon %}<img class="img-fluid" alt="{{metadata.title}}" src="{{navbar.icon}}" 
-                width="80" height="80" loading="eager"/>
+                width="80" height="80" loading="eager"
+                fetchpriority="high"/>
                 {% else %}{{navbar.title}}{% endif %}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fas fa-bars"></i>
+               Menu <i class="fas fa-bars ms-1"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">

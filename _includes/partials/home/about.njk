@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-7 p-3 p-md-5">
                         <h3><a href="{{j.url}}">{{j.name}}</a></h3>
-                        <p class="lead text-secondary">{{j.about}}</p>
+                        <p class="lead text-white">{{j.about}}</p>
                         <p>{{j.text | md | safe }}</p>
                         <div class="mt-4 col-12">
                             {% for s in j.social %}{% if s.title %}
@@ -26,7 +26,7 @@
             {% else %}
                 <div class="col-md-12 p-3 p-md-5">
                     <h3><a href="{{j.url}}">{{j.name}}</a></h3>
-                    <p class="lead text-secondary">{{j.about}}</p>
+                    <p class="lead text-white">{{j.about}}</p>
                     <p>{{j.text | md | safe }}</p>
                     <div class="mt-4 col-12">
                         {% for s in j.social %}{% if s.title %}

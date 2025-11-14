@@ -26,6 +26,14 @@ Need Help or have project ?? Contact Me.
 + Update Host Profile Page on `content/host/*.md`
 + Update Podcast Epsiode on `content/episodes/*.md`
 
+### Change Log
+
+14 Nov 2025
++ Improve for lighthouse
++ Update contrast color
++ Implement Picture Source Lazy Load
++ Implement frequency high
+
 ### Timestamp Support
 
 Optional you can use timestamp.
