@@ -68,7 +68,7 @@ Important Terms and Topics
 
  - Mark Savage, “Native Americans and the Constitution: The Original Understanding”, 16 American Indian Law Review 57 (1991) --[https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/](https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/)
 
- - Mark Savage, “The Great Secret about Federal Indian Law--Two Hundred Years in Violation of the Constitution--And the Opinion theSupreme Court Should Have Written to Reveal It”, 20 _N.Y.U.Review Of Law & Social Change_ 343 (1992) --[https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage\_RLSC\_20.2.pdf](https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf)
+ - Mark Savage, “The Great Secret about Federal Indian Law--Two Hundred Years in Violation of the Constitution--And the Opinion theSupreme Court Should Have Written to Reveal It”, 20 _N.Y.U.Review Of Law & Social Change_ 343 (1992) --[https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf]https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf)
 
  - Steve Newcomb, “The Evidence of Christian Nationalism In FederalIndian Law: The Doctrine of Discovery, Johnson v. McIntosh, andPlenary Power”, 20 _N.Y.U. Review Of Law & Social Change_343 (1993) --[https://socialchangenyu.com/wp-content/uploads/2017/12/Steven-Newcomb\_RLSC\_20.2.pdf](https://socialchangenyu.com/wp-content/uploads/2017/12/Steven-Newcomb_RLSC_20.2.pdf)
 
