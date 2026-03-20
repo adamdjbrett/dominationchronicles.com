@@ -1,12 +1,11 @@
 ---
 title: "Episode 18: MARK SAVAGE: “NATURAL RIGHTS” -- UNRAVELLING THE QUESTIONS"
 description: "Peter P. d'Errico and Steven Newcomb discuss natural rights with guest Mark Savage."
-publishDate: 2026-03-05
+publishDate: 2026-03-20
 image: /img/podcast/cover-art2.webp
-duration: "0:00:00"
-#videoId: mGPhvTVLpL8 
+duration: "1:09:06"
+videoId: mGPhvTVLpL8 
 #redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/4b3c1607-68b5-46cd-aa9a-7c7ffae6866f"
-published: false
 tags:
  - plenary-power
  - doctrine-of-discovery
@@ -16,7 +15,6 @@ tags:
  - bilateral-relations
  - treaties
  - systemic-litigation
-
 ---
 
 ## Introduction
