@@ -5,7 +5,7 @@ publishDate: 2026-03-20
 image: /img/podcast/cover-art2.webp
 duration: "1:09:06"
 videoId: mGPhvTVLpL8 
-#redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/304be9ff-1037-46e0-95b5-222ce629ce1f"
+redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/304be9ff-1037-46e0-95b5-222ce629ce1f"
 tags:
  - plenary-power
  - doctrine-of-discovery
