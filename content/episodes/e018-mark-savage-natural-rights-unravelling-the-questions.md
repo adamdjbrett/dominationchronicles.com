@@ -5,7 +5,7 @@ publishDate: 2026-03-20
 image: /img/podcast/cover-art2.webp
 duration: "1:09:06"
 videoId: mGPhvTVLpL8 
-#redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/4b3c1607-68b5-46cd-aa9a-7c7ffae6866f"
+#redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/304be9ff-1037-46e0-95b5-222ce629ce1f"
 tags:
  - plenary-power
  - doctrine-of-discovery
@@ -16,13 +16,14 @@ tags:
  - treaties
  - systemic-litigation
 ---
-
 ## Introduction
 
 Attorney Mark Savage joins us in this episode for a provocative discussion of the US claim of “plenary power” over Native nations and peoples. In the early 1990’s (!), Mark authored two seminal law review articles showing that the doctrine of “plenary power” has no basis in the US Constitution. In November 2025, in a dramatic move at the Supreme Court, two justices took the same stance! ( Steve and I discussed that at [https://www.youtube.com/watch?v=jtTV9ZAKWtc](https://www.youtube.com/watch?v=jtTV9ZAKWtc) )
 
 Today, the three of us explore the deep history behind the claim of “plenary power”, reaching back through English Common Law and the trajectory of Christendom. We also discuss possible futures if/when the claim of “plenary power” were overturned by the Supreme Court. 
+
 The philosophical depth of the issues becomes apparent when we reach the concept of “natural rights”, which is another way of talking about “original free existence” and which was rejected in the 1823 Johnson v. McIntosh decision when the Supreme Court laid the foundation for “plenary power” by declaring that the US holds “title” to Indigenous Peoples’ lands.
+
 For those new to the issues, our conversation provides an accessible entry point; for experienced listeners, we point to a variety of resources for further study.
 
 ## Speakers
@@ -33,30 +34,30 @@ For those new to the issues, our conversation provides an accessible entry point
 
 ## Topics of Discussion
 
-    • **Mark Savage's Background and Philosophy:** Savage recounts his journey from studying philosophy at UC Berkeley to attending Stanford Law School, where he was influenced by Professor Derrick Bell's teachings on race and the law. He discusses how a philosophical orientation is crucial for questioning the foundational principles behind legal doctrines.
+- **Mark Savage's Background and Philosophy:** Savage recounts his journey from studying philosophy at UC Berkeley to attending Stanford Law School, where he was influenced by Professor Derrick Bell's teachings on race and the law. He discusses how a philosophical orientation is crucial for questioning the foundational principles behind legal doctrines.
     
-    • **Challenge to Plenary Power:** A central theme is Savage's research showing that the "plenary power" (total power) the U.S. claims over Native nations lacks a foundation in the Constitution's Indian Commerce Clause. The speakers discuss how this doctrine was largely "made up" out of thin air.
+- **Challenge to Plenary Power:** A central theme is Savage's research showing that the "plenary power" (total power) the U.S. claims over Native nations lacks a foundation in the Constitution's Indian Commerce Clause. The speakers discuss how this doctrine was largely "made up" out of thin air.
     
-    • **Supreme Court Developments:** The group discusses recent dissents by Justices Gorsuch and Thomas that have begun to challenge the plenary power doctrine. However, Savage expresses caution, noting that while they criticize federal plenary power, they have not yet clarified what should replace it or if they might favor state power instead.
+- **Supreme Court Developments:** The group discusses recent dissents by Justices Gorsuch and Thomas that have begun to challenge the plenary power doctrine. However, Savage expresses caution, noting that while they criticize federal plenary power, they have not yet clarified what should replace it or if they might favor state power instead.
     
-    • **The Doctrine of Discovery:** They examine Johnson v. McIntosh and the "Doctrine of Christian Discovery," noting that these concepts are not mentioned in the Constitution but are used to justify domination.
+-  **The Doctrine of Discovery:** They examine Johnson v. McIntosh and the "Doctrine of Christian Discovery," noting that these concepts are not mentioned in the Constitution but are used to justify domination.
     
-    • **Legal "Silence" and Routine:** The speakers lament the "deafening silence" from the Federal Indian Bar regarding these fundamental challenges. They suggest that many lawyers find it easier to work within the existing, flawed system rather than challenging its core legitimacy.
+- **Legal "Silence" and Routine:** The speakers lament the "deafening silence" from the Federal Indian Bar regarding these fundamental challenges. They suggest that many lawyers find it easier to work within the existing, flawed system rather than challenging its core legitimacy.
 Important Terms and Topics
     
-    • **Plenary Power:** The claim of absolute, total federal authority over indigenous nations.
+- **Plenary Power:** The claim of absolute, total federal authority over indigenous nations.
     
-    • **Doctrine of Discovery:** A legal principle used to claim land and sovereignty based on European arrival, which the speakers argue has no constitutional basis.
+- **Doctrine of Discovery:** A legal principle used to claim land and sovereignty based on European arrival, which the speakers argue has no constitutional basis.
     
-    • **Indian Commerce Clause:** The specific section of the Constitution often cited (incorrectly, according to Savage) as the source of plenary power.
+- **Indian Commerce Clause:** The specific section of the Constitution often cited (incorrectly, according to Savage) as the source of plenary power.
     
-    • **Original Free Existence:** The inherent sovereignty and independence of Native nations that existed before European contact.
+- **Original Free Existence:** The inherent sovereignty and independence of Native nations that existed before European contact.
     
-    • **Internal Point of View:** The necessity of understanding history and law from the perspective of the indigenous people involved, rather than just the colonial recorders.
+- **Internal Point of View:** The necessity of understanding history and law from the perspective of the indigenous people involved, rather than just the colonial recorders.
     
-    • **Bilateral Relations / Treaties:** The concept of the U.S. and Native nations acting as equal parties in a treaty-based relationship, rather than a superior-inferior dynamic.
+- **Bilateral Relations / Treaties:** The concept of the U.S. and Native nations acting as equal parties in a treaty-based relationship, rather than a superior-inferior dynamic.
     
-    • **Systemic Litigation:** Legal strategies aimed at addressing the root causes of issues like poverty and discrimination rather than just individual cases.
+- **Systemic Litigation:** Legal strategies aimed at addressing the root causes of issues like poverty and discrimination rather than just individual cases.
 
 
 ## Transcript
@@ -90,9 +91,6 @@ Important Terms and Topics
  - Kent McNeil, _Common Law Aboriginal Title_ (1989) --[https://archive.org/details/commonlawaborigi0000mcne/page/n5/mode/2up](https://archive.org/details/commonlawaborigi0000mcne/page/n5/mode/2up)
 
 
-## Citation
-Steve Newcomb and Peter d’Errico, "Episode 18: MARK SAVAGE: “NATURAL RIGHTS” -- UNRAVELLING THE QUESTIONS," _Domination Chronicles_ (Podcast), 2026-03-05, <https://dominationchronicles.com/e018-mark-savage-natural-rights-unravelling-the-questions>.
-
 ## Interlinks
 
 Be sure to visit these other great resources on this and other important cultural subjects!
@@ -101,6 +99,9 @@ Be sure to visit these other great resources on this and other important cultura
 
 - **Journal for Cultural and Religious Theory** - [https://jcrt.org/archives/23.1/](https://jcrt.org/archives/23.1/)
 
+
+## Citation
+Steve Newcomb and Peter d’Errico, "Episode 18: MARK SAVAGE: “NATURAL RIGHTS” -- UNRAVELLING THE QUESTIONS," _Domination Chronicles_ (Podcast), 2026-03-05, <https://dominationchronicles.com/e018-mark-savage-natural-rights-unravelling-the-questions>.
 
 
 
