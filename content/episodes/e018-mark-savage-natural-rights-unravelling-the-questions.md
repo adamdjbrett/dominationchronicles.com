@@ -66,13 +66,13 @@ Important Terms and Topics
 
 ## Resources:
 
- - Mark Savage, “Native Americans and the Constitution: The Original Understanding”, 16 American Indian Law Review 57 (1991) --[https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/](https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/)
+ - Mark Savage, “Native Americans and the Constitution: The Original Understanding”, 16 American Indian Law Review 57 (1991) -- [https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/](https://digitalcommons.law.ou.edu/ailr/vol16/iss1/3/)
 
- - Mark Savage, “The Great Secret about Federal Indian Law--Two Hundred Years in Violation of the Constitution--And the Opinion theSupreme Court Should Have Written to Reveal It”, 20 _N.Y.U.Review Of Law & Social Change_ 343 (1992) --[https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf]https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf)
+ - Mark Savage, “The Great Secret about Federal Indian Law--Two Hundred Years in Violation of the Constitution--And the Opinion theSupreme Court Should Have Written to Reveal It”, 20 _N.Y.U.Review Of Law & Social Change_ 343 (1992) -- [https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf]https://socialchangenyu.com/wp-content/uploads/2017/12/Mark-Savage_RLSC_20.2.pdf)
 
  - Steve Newcomb, “The Evidence of Christian Nationalism In FederalIndian Law: The Doctrine of Discovery, Johnson v. McIntosh, andPlenary Power”, 20 _N.Y.U. Review Of Law & Social Change_343 (1993) --[https://socialchangenyu.com/wp-content/uploads/2017/12/Steven-Newcomb\_RLSC\_20.2.pdf](https://socialchangenyu.com/wp-content/uploads/2017/12/Steven-Newcomb_RLSC_20.2.pdf)
 
- - “Indian Commerce Clause”, US Constitution, Article 1, Section 8,Clause 3 --[https://press-pubs.uchicago.edu/founders/tocs/a1\_8\_3\_commerce.html](https://press-pubs.uchicago.edu/founders/tocs/a1_8_3_commerce.html)
+ - “Indian Commerce Clause”, US Constitution, Article 1, Section 8,Clause 3 --[https://press-pubs.uchicago.edu/founders/tocs/a1_8_3_commerce.html](https://press-pubs.uchicago.edu/founders/tocs/a1_8_3_commerce.html)
 
  - _Johnson v. McIntosh_ (1823) --[https://supreme.justia.com/cases/federal/us/21/543/](https://supreme.justia.com/cases/federal/us/21/543/)
 
