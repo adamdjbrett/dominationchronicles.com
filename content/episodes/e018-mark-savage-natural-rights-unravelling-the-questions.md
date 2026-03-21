@@ -1,6 +1,6 @@
 ---
 title: "Episode 18: MARK SAVAGE: “NATURAL RIGHTS” -- UNRAVELLING THE QUESTIONS"
-description: "Peter P. d'Errico and Steven Newcomb discuss natural rights with guest Mark Savage."
+description: "In our latest Domination Chronicles conversation with attorney Mark Savage, we revisit plenary power one of the central legal fictions of U.S. federal Indian law and ask what becomes possible when we return to the reality of original free existence."
 publishDate: 2026-03-20
 image: /img/podcast/cover-art2.webp
 duration: "1:09:06"
