@@ -1,12 +1,11 @@
 ---
-title: 'Episode 19: LORETTA AFRAID OF BEAR-COOK: “LIVING IN OGLALA LAKOTA COMMUNITY”'
-description: A deep conversation between hosts Steven Newcomb and Peter d'Errico and guest Loretta Afraid of Bear-Cook, about the preservation of Oglala Lakota traditions, the power of indigenous language, and the resistance against systems of domination and modern convenience.
+title: "Episode 19: LORETTA AFRAID OF BEAR-COOK: LIVING IN OGLALA LAKOTA COMMUNITY"
+description: "A deep conversation between hosts Steven Newcomb and Peter d'Errico and guest Loretta Afraid of Bear-Cook, about the preservation of Oglala Lakota traditions, the power of indigenous language, and the resistance against systems of domination and modern convenience."
 publishDate: 2026-04-07
 image: /img/podcast/cover-art2.webp
 duration: "1:03:01"
 videoId: zhwlHhEIFiw 
 redcircle_embed: "https://redcircle.com/embedded-player/sh/2caa5839-9deb-419c-9347-2458812d9406/ep/0edb3aa6-eb2b-4ac4-983e-b7f925be0f22"
-published: false
 tags:
  - wolakota
  - linguicide
@@ -18,7 +17,6 @@ tags:
  - ho-trohk'echa
  - eagle-bone-whistle
  - language nest
-
 ---
 
 ## Introduction
