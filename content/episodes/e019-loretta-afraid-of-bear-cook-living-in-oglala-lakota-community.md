@@ -105,6 +105,9 @@ Be sure to visit these other great resources on this and other important cultura
 
 
 
+## Citation
+Steve Newcomb and Peter d’Errico, "Episode 19: LORETTA AFRAID OF BEAR-COOK: “LIVING IN OGLALA LAKOTA COMMUNITY”," _Domination Chronicles_ (Podcast), 2026-04-07, <https://dominationchronicles.com/e019-loretta-afraid-of-bear-cook-living-in-oglala-lakota-community>.
+
 
 
 
