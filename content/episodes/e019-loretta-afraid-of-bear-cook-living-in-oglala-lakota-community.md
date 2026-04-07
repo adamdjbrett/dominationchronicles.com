@@ -1,7 +1,7 @@
 ---
 title: 'Episode 19: LORETTA AFRAID OF BEAR-COOK: “LIVING IN OGLALA LAKOTA COMMUNITY”'
 description: A deep conversation between hosts Steven Newcomb and Peter d'Errico and guest Loretta Afraid of Bear-Cook, about the preservation of Oglala Lakota traditions, the power of indigenous language, and the resistance against systems of domination and modern convenience.
-publishDate: 2026-04-17
+publishDate: 2026-04-07
 image: /img/podcast/cover-art2.webp
 duration: "1:03:01"
 videoId: zhwlHhEIFiw 
