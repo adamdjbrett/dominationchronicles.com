@@ -2,7 +2,7 @@
 title: 'Peter d’Errico Profile'
 description: "About Peter d’Errico"
 name: "Peter d’Errico"
-image: /img/peter-derrico.webp
+image: /img/peter-derrico2.webp
 ---
 Peter d’Errico graduated from Yale Law School in 1968. He was an attorney at Dinébe’iiná Náhiiłna be Agha’diit’ahii, Navajo Legal Services, in Shiprock, 1968-1970. He was a founding professor of Legal Studies at the University of Massachusetts Amherst and taught there from 1970-2002.
 
