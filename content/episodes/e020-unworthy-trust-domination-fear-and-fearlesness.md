@@ -3,7 +3,7 @@ title: "Episode 20 - UNTRUSTWORTHY “TRUST”: DOMINATION, FEAR, AND FEARLESSNE
 description: 'Today we deep dive into the legal and philosophical foundations of the "federal Indian law trust doctrine." We argue that the term "trust" is a euphemism for a relationship of domination rather than a protective legal obligation.'
 image: /img/podcast/cover-art2.webp
 duration: "1:01:01"
-publishDate: 2026-04-05
+publishDate: 2026-04-18
 videoId: l4YO9zFRzV8
 #cover: 
 # image: "/img/cover.webp"
