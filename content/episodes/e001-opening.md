@@ -31,6 +31,3 @@ In this inaugural episode of *Domination Chronicles*, [Steven Newcomb](/host/ste
 ## Citation
 
 Newcomb, Steven T., and Peter d'Errico, cohosts. "Our Opening Conversation." *The Domination Chronicles Podcast*, October 8, 2025. https://dominationchronicles.com/episodes/e001-opening.
-
-- [Download RIS Citation](/citations/e001-opening.ris)
-- [Download CSL JSON Citation](/citations/e001-opening.json)

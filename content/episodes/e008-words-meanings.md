@@ -66,6 +66,3 @@ Steve says the "domination translator" throws some of our listeners for a loop. 
 
 ## Citation
 Steve Newcomb and Peter d’Errico, "E008: WORDS & MEANINGS," _Domination Chronicles_ (Podcast), December 7, 2025. <https://dominationchronicles.com/episodes/e008-words-meanings/>
-
-- [Download RIS Citation](/citations/e008-words-meanings.ris)
-- [Download CSL JSON Citation](/citations/e008-words-meanings.csl.json)

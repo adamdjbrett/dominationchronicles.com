@@ -2,7 +2,7 @@
   {
     "id": "e016-colonists-settlers-invaders-expansionists-immigrants",
     "type": "broadcast",
-    "title": "Episode 16: “COLONISTS, SETTLERS, INVADERS, EXPANSIONISTS, IMMIGRANTS",
+    "title": "Episode 16: COLONISTS, SETTLERS, INVADERS, EXPANSIONISTS, IMMIGRANTS",
     "abstract": "Peter d'Errico and Steven Newcomb critique a recent article in The Economist regarding the Indian Removal Act.",
     "URL": "https://dominationchronicles.com/episodes/e016-colonists-settlers-invaders-expansionists-immigrants/",
     "language": "en",
@@ -12,25 +12,20 @@
         [
           2026,
           2,
-          19
+          24
         ]
       ]
     },
     "keyword": [
-      "the-economist",
       "indian-removal-act",
-      "native-history",
-      "muscogee-creek-nation-memorial",
-      "rule-of-law",
-      "uncontrolled-invasion",
+      "muscogee",
       "johnson-v-mcintosh",
-      "domination-of-liberty",
-      "original-free-existence",
-      "system-of-domination",
-      "empire-of-liberty",
-      "vacant-lands"
+      "domination",
+      "liberty",
+      "vacant-lands",
+      "keywords"
     ],
-    "duration": "55:16",
+    "duration": "53:58",
     "container": "/img/podcast/cover-art2.webp"
   }
 ]

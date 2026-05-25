@@ -40,6 +40,3 @@ Does it mean that the “boarding schools” were successful? That Henry Pratt s
 ## Citation
 
 Newcomb, Steven T., and Peter d'Errico, cohosts. "Does the Future of Indians Include Eminent Domain?" *The Domination Chronicles Podcast*, November 12, 2025. https://dominationchronicles.com/episodes/e005-future-of-indians/.
-
-- [Download RIS Citation](/citations/e005-future-of-indians.ris)
-- [Download CSL JSON Citation](/citations/e005-future-of-indians.json)

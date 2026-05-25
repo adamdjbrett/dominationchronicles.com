@@ -47,6 +47,3 @@ In *Brown*, the court overturned the "separate but equal" doctrine because it ob
 
 ## Citation
 Steve Newcomb and Peter d’Errico, "E010: Pulp Legal Fiction: The Bizarre Case Of Tee-hit-ton v. US," _Domination Chronicles_ (Podcast), December 22, 2025. <https://dominationchronicles.com/episodes/e010-tee-hit-ton/>
-
-- [Download RIS Citation](/citations/e010-tee-hit-ton.ris)
-- [Download CSL JSON Citation](/citations/e010-tee-hit-ton.csl.json)

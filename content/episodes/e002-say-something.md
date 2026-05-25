@@ -42,6 +42,3 @@ As the Halverson case illustrates, the Johnson decision is still the basis of US
 ## Citation
 
 Newcomb, Steven T., and Peter d'Errico, cohosts. "'Say Something, See Something'." *The Domination Chronicles Podcast*, October 9, 2025. https://dominationchronicles.com/episodes/e002-say-something/.
-
-- [Download RIS Citation](/citations/e002-say-something.ris)
-- [Download CSL JSON Citation](/citations/e002-say-something.json)

@@ -27,6 +27,3 @@ We show that the rhetoric of domination is not the same as the domination decisi
 ## Citation
 
 Newcomb, Steven T., and Peter d'Errico, cohosts. "Seeing Through To The Emperor's Extravagant Pretension." *The Domination Chronicles Podcast*, October 13, 2025. https://dominationchronicles.com/episodes/e004-seeing-through/.
-
-- [Download RIS Citation](/citations/e004-seeing-through.ris)
-- [Download CSL JSON Citation](/citations/e004-seeing-through.json)

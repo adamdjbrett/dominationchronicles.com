@@ -61,6 +61,3 @@ Episode 7 invites listeners to rethink existence at the most basic level. If qua
 
 ## Citation
 Steve Newcomb and Peter d’Errico, "E007: A Quantum View of 'Free Existence' as Entangled Indeterminacy," _Domination Chronicles_ (Podcast), December 1, 2025. <https://dominationchronicles.com/episodes/e007-quantum-view/>.
-
-- [Download RIS Citation](/citations/e007-quantum-view.ris)
-- [Download CSL JSON Citation](/citations/e007-quantum-view.csl.json)

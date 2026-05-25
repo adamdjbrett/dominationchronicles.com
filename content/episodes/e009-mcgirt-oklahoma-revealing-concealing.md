@@ -57,6 +57,3 @@ Our conversation moves beyond *McGirt* into other claims of a right of dominatio
 
 ## Citation
 Steve Newcomb and Peter d’Errico, "Episode 009: McGirt v. Oklahoma: Revealing and Concealing Domination," _Domination Chronicles_ (Podcast), December 17, 2025. <https://dominationchronicles.com/episodes/e009-mcgirt-oklahoma-revealing-concealing/>
-
-- [Download RIS Citation](/citations/e009-mcgirt-oklahoma-revealing-concealing.ris)
-- [Download CSL JSON Citation](/citations/e009-mcgirt-oklahoma-revealing-concealing.csl.json)

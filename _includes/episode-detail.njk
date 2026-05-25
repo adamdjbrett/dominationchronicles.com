@@ -15,6 +15,11 @@ layout: base.njk
                 {% include "partials/episodes/redcircle.njk" %}
                 <h2 class="lead fw-bold mb-3"><a href="{{page.url}}">{{description}}</a></h2>
                 {{ content | safe }}
+                <h2 class="h4 fw-bold mt-5 mb-3">Citation Downloads</h2>
+                <ul>
+                    <li><a href="/citations/{{ page.fileSlug }}.ris">Download RIS Citation</a></li>
+                    <li><a href="/citations/{{ page.fileSlug }}.csl.json">Download CSL JSON Citation</a></li>
+                </ul>
                 {% include "partials/episodes/timestamp.njk" %}
                 {% include "partials/episodes/pagination.njk" %}
             </div>

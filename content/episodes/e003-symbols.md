@@ -32,6 +32,3 @@ We explore symbols — statues, seals, emblems, etc. — in the process of reali
 ## Citation
 
 Newcomb, Steven T., and Peter d'Errico, cohosts. "Symbols, Enigmas, Curiosity." *The Domination Chronicles Podcast*, October 12, 2025. https://dominationchronicles.com/episodes/e003-symbols/.
-
-- [Download RIS Citation](/citations/e003-symbols.ris)
-- [Download CSL JSON Citation](/citations/e003-symbols.json)

@@ -2,8 +2,8 @@
   {
     "id": "e013-a-domination-chronicles-lexicon",
     "type": "broadcast",
-    "title": "Domination Chronicles Episode 13: A Domination Chronicles Lexicon",
-    "abstract": "Steve and Peter discuss key terms used to justify the loss of Indigenous freedom and the rise of the United States as an empire.",
+    "title": "Episode 13: A Domination Chronicles Lexicon",
+    "abstract": "Steve discusses key terms used to justify the loss of Indigenous freedom and the rise of the United States as an empire.",
     "URL": "https://dominationchronicles.com/episodes/e013-a-domination-chronicles-lexicon/",
     "language": "en",
     "source": "The Domination Chronicles Podcast",
@@ -25,7 +25,8 @@
       "ascendancy",
       "dominion",
       "property",
-      "empire"
+      "empire",
+      "keywords"
     ],
     "duration": "5:04",
     "container": "/img/podcast/cover-art2.webp"
