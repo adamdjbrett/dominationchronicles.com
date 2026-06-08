@@ -4,6 +4,8 @@ import fontAwesomePlugin from "@11ty/font-awesome";
 import { IdAttributePlugin } from "@11ty/eleventy";
 import yaml from "js-yaml";
 import { execSync } from "child_process";
+import path from "path";
+import { fileURLToPath } from "url";
 import markdownIt from "markdown-it";
 import pluginFilters from "./_config/filters.js";
 import {
@@ -13,10 +15,22 @@ import {
 import { DateTime } from "luxon";
 import embedYouTube from "eleventy-plugin-youtube-embed";
 import eleventyPluginYoutubeEmbed from "eleventy-plugin-youtube-embed";
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
 	const isProduction = process.env.ELEVENTY_ENV === "production";
 	const isBuild = process.env.ELEVENTY_RUN_MODE === "build";
+	const isEpisodeMarkdown = (filePath) => {
+		const normalizedPath = filePath.replace(/\\/g, "/").replace(/^\.\//, "");
+		return /^content\/episodes\/[^/]+\.md$/.test(normalizedPath);
+	};
+	const generateCitations = () => {
+		execSync("node scripts/generate-citations.cjs", {
+			cwd: projectRoot,
+			stdio: "inherit",
+		});
+	};
 	// Removed manual authors.json loading. Eleventy will auto-load _data/authors.yaml and _data/authors.json as global data.
 	eleventyConfig.addPreprocessor("drafts", "*", (data) => {
 		const isDraft = data?.draft === true;
@@ -122,6 +136,11 @@ export default async function (eleventyConfig) {
 		return DateTime.fromJSDate(date, { zone: feedZone }).toISO({
 			suppressMilliseconds: true,
 		});
+	});
+	eleventyConfig.on("eleventy.beforeWatch", (changedFiles) => {
+		if (changedFiles.some(isEpisodeMarkdown)) {
+			generateCitations();
+		}
 	});
 	eleventyConfig.on("eleventy.after", () => {
 		if (isBuild) {

@@ -43,5 +43,5 @@ We illustrate the confusion by discussing a March 2026 document that asserts Lak
 
 ## Citation
 
-Steve Newcomb and Peter d’Errico, "“Tribal Sovereignty” 101: Limited Sovereignty, Federal Domination, and the Language Trap," _Domination Chronicles_ (Podcast), 2026-04-05, <https://dominationchronicles.com/e021-tribal-sovereignty-101/>.
+Steve Newcomb and Peter d’Errico, "“Tribal Sovereignty” 101: Limited Sovereignty, Federal Domination, and the Language Trap," _Domination Chronicles_ (Podcast), 2026-05-25, <https://dominationchronicles.com/e021-tribal-sovereignty-101/>.
 

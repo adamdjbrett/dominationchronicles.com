@@ -18,7 +18,7 @@ SITE_URL = "https://dominationchronicles.com"
 AUTHORS = ["Steven T. Newcomb", "Peter d'Errico"]
 AUTHOR_TEXT = "Steven T. Newcomb and Peter d'Errico"
 PUBLISHER = "The Domination Chronicles Podcast"
-LICENSE_NAME = "CC BY-SA 4.0"
+LICENSE_NAME = "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
 LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
 LANGUAGE = "en-US"
 
@@ -134,28 +134,51 @@ def xmp_packet(data):
 <?xpacket end="w"?>"""
 
 
+def episode_data(episode_path, meta):
+    slug = episode_slug(episode_path)
+    return {
+        "slug": slug,
+        "title": clean_text(meta.get("title")) or slug,
+        "description": clean_text(meta.get("description")),
+        "publish_date": iso_date(meta.get("publishDate")),
+        "duration": clean_text(meta.get("duration")),
+        "subjects": [clean_text(t) for t in meta.get("tags", []) if clean_text(t)],
+        "episode": episode_number(slug),
+        "episode_url": f"{SITE_URL}/episodes/{slug}/",
+    }
+
+
 def build_pdf_map():
     pdf_map = {}
+    episodes = []
     for episode_path in sorted(EPISODES_DIR.glob("*.md")):
         meta, markdown = front_matter(episode_path)
         if meta.get("published") is False:
             continue
-        slug = episode_slug(episode_path)
+        data = episode_data(episode_path, meta)
+        episodes.append(data)
         links = find_pdf_links(markdown)
         for link in links:
             pdf_path = PDFS_DIR / html.unescape(link)
             if not pdf_path.exists():
-                raise FileNotFoundError(f"Episode {slug} links missing PDF: {pdf_path}")
+                raise FileNotFoundError(f"Episode {data['slug']} links missing PDF: {pdf_path}")
             pdf_map[pdf_path] = {
-                "slug": slug,
-                "title": clean_text(meta.get("title")) or slug,
-                "description": clean_text(meta.get("description")),
-                "publish_date": iso_date(meta.get("publishDate")),
-                "duration": clean_text(meta.get("duration")),
-                "subjects": [clean_text(t) for t in meta.get("tags", []) if clean_text(t)],
-                "episode": episode_number(slug),
-                "episode_url": f"{SITE_URL}/episodes/{slug}/",
+                **data,
                 "pdf_url": f"{SITE_URL}/pdfs/{html.unescape(link)}",
+            }
+
+    for pdf_path in sorted(PDFS_DIR.glob("*.pdf")):
+        if pdf_path in pdf_map:
+            continue
+        pdf_name = pdf_path.name
+        matches = [
+            data for data in episodes
+            if pdf_name == f"{data['slug']}.pdf" or pdf_name.startswith(f"{data['slug']}-")
+        ]
+        if len(matches) == 1:
+            pdf_map[pdf_path] = {
+                **matches[0],
+                "pdf_url": f"{SITE_URL}/pdfs/{html.escape(pdf_name)}",
             }
     return pdf_map
 
