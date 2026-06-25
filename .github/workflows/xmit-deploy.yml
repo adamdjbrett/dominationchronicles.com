@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
           cache-dependency-path: package-lock.json
 
@@ -94,6 +94,18 @@ jobs:
           fi
           echo "Deploying _site to $XMIT_SITE via XMIT CLI";
           npx @xmit.co/xmit "$XMIT_SITE" _site || { echo 'XMIT deploy failed' >&2; exit 1; }
+
+      - name: Publish Standard.site records to ATProto
+        env:
+          ATPROTO_APP_PASSWORD: ${{ secrets.ATPROTO_APP_PASSWORD }}
+          ATPROTO_HANDLE: ${{ vars.ATPROTO_HANDLE }}
+          ATPROTO_SERVICE: ${{ vars.ATPROTO_SERVICE }}
+        run: |
+          if [ -z "$ATPROTO_APP_PASSWORD" ]; then
+            echo "ATPROTO_APP_PASSWORD secret is not set" >&2
+            exit 1
+          fi
+          npm run publish:atproto
 
       - name: Post-deploy summary
         run: |

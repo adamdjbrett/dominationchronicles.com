@@ -21,6 +21,13 @@ metasocial:
   - twitteruser: "@dominationchron"
   - twitter: https://x.com/dominationchron
 
+atproto:
+  handle: dominationchron.bsky.social
+  did: did:plc:nflc5vo7sxtvd5g3v4wnvpfb
+  profile: https://bsky.app/profile/dominationchron.bsky.social
+  did_url: http://lemma.pub/did:plc:nflc5vo7sxtvd5g3v4wnvpfb
+  standard_site_publication_uri: at://did:plc:nflc5vo7sxtvd5g3v4wnvpfb/site.standard.publication/dominationchronicles
+
 # Author
 author: 
  name: Adam Dj Brett

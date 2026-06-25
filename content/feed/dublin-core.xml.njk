@@ -1,0 +1,43 @@
+---
+permalink: /feed/dublin-core.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% set siteUrl = metadata.url %}
+{% set feedItems = (collections.episodes or []) | reverse %}
+<?xml version="1.0" encoding="utf-8"?>
+<records
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xml:lang="{{ metadata.language or "en" }}">
+{% for post in feedItems %}
+	{% set postUrl = post.url | htmlBaseUrl(siteUrl) %}
+	{% set published = post.data.publishDate or post.date %}
+	{% set summary = (post.data.description or ((post.templateContent or "") | striptags)) | stripMarkdown | truncate(500) %}
+	{% set tagList = post.data.tags if post.data.tags is not string else [post.data.tags] %}
+	<record>
+		<dc:title>{{ post.data.title | escape }}</dc:title>
+		<dc:creator>Steven T. Newcomb</dc:creator>
+		<dc:creator>Peter d’Errico</dc:creator>
+		<dc:publisher>The Domination Chronicles Podcast</dc:publisher>
+		<dc:date xsi:type="dcterms:W3CDTF">{{ published | xmlDate }}</dc:date>
+		<dc:type>Sound</dc:type>
+		<dc:format>text/html</dc:format>
+		<dc:identifier xsi:type="dcterms:URI">{{ postUrl }}</dc:identifier>
+		<dc:language>{{ metadata.language or "en" }}</dc:language>
+		<dc:description>{{ summary | escape }}</dc:description>
+		<dcterms:isPartOf xsi:type="dcterms:URI">{{ siteUrl }}/</dcterms:isPartOf>
+		{% if post.data.duration %}
+		<dcterms:extent>{{ post.data.duration | escape }}</dcterms:extent>
+		{% endif %}
+		{% if tagList and tagList | length %}
+			{% for tag in tagList %}
+				{% if tag and tag != "episodes" %}
+		<dc:subject>{{ tag | escape }}</dc:subject>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	</record>
+{% endfor %}
+</records>

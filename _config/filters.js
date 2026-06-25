@@ -1,12 +1,30 @@
 import { DateTime } from "luxon";
 
+function normalizeDate(value) {
+	if (!value) {
+		return null;
+	}
+	if (value instanceof Date && !Number.isNaN(value.valueOf())) {
+		return value;
+	}
+	const date = new Date(value);
+	if (Number.isNaN(date.valueOf())) {
+		return null;
+	}
+	return date;
+}
+
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
 	});
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+		const date = dateObj === "now" ? new Date() : normalizeDate(dateObj);
+		if (!date) {
+			return "";
+		}
+		return DateTime.fromJSDate(date, { zone: "utc" }).toFormat('yyyy-LL-dd');
 	});
 	eleventyConfig.addFilter("absoluteUrl", (path, baseUrl) => {
 		if (!path) {
@@ -27,6 +45,44 @@ export default function(eleventyConfig) {
 	});
 	eleventyConfig.addFilter("urlencode", (value) => {
 		return encodeURIComponent(value || "");
+	});
+	eleventyConfig.addFilter("xmlDate", (value) => {
+		const date = normalizeDate(value);
+		if (!date) {
+			return "";
+		}
+		return DateTime.fromJSDate(date, { zone: "utc" }).toFormat("yyyy-LL-dd");
+	});
+	eleventyConfig.addFilter("rfc822Date", (value) => {
+		const date = normalizeDate(value);
+		if (!date) {
+			return "";
+		}
+		return DateTime.fromJSDate(date, { zone: "utc" }).toRFC2822();
+	});
+	eleventyConfig.addFilter("isoDateTime", (value) => {
+		const date = normalizeDate(value);
+		if (!date) {
+			return "";
+		}
+		return DateTime.fromJSDate(date, { zone: "utc" }).toISO({ suppressMilliseconds: true });
+	});
+	eleventyConfig.addFilter("stripMarkdown", (value) => {
+		return String(value || "")
+			.replace(/```[\s\S]*?```/g, " ")
+			.replace(/`([^`]+)`/g, "$1")
+			.replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
+			.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+			.replace(/[#>*_~\-]+/g, " ")
+			.replace(/\s+/g, " ")
+			.trim();
+	});
+	eleventyConfig.addFilter("standardDocumentUri", (did, rkey) => {
+		if (!did || !rkey) {
+			return "";
+		}
+		const cleanRkey = String(rkey).replace(/[^A-Za-z0-9._~:-]/g, "-");
+		return `at://${did}/site.standard.document/${cleanRkey}`;
 	});
 	eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 	eleventyConfig.addFilter("head", (array, n) => {

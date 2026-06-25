@@ -2,6 +2,10 @@
 <meta name="title" content="{{ (title or metadata.title) | escape }}" />
 <meta name="description" content="{{ (description or metadata.description) | escape }}" />
 <meta name="referrer" content="strict-origin-when-cross-origin">
+{% set canonicalUrl = metadata.url ~ page.url %}
+{% set isEpisode = "episodes" in (tags or []) %}
+{% set publishedDate = publishDate or page.date %}
+{% set episodeAuthors = citationAuthors or authors or ["Steven T. Newcomb", "Peter d’Errico"] %}
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ (title or metadata.title) | escape }}" />
@@ -22,8 +26,32 @@
 <meta name="twitter:site" content="{{ metadata.metasocial.twitter }}" />
 
 <!-- Dublin Core -->
-<meta property="dc:title" content="{{ (title or metadata.title) | escape }}" />
-<meta property="dc:creator" content="{{ metadata.author.name }}" />
+<meta name="dc.title" content="{{ (title or metadata.title) | escape }}" />
+{% if isEpisode %}
+{% for author in episodeAuthors %}
+<meta name="dc.creator" content="{{ author | escape }}" />
+{% endfor %}
+<meta name="dc.date" content="{{ publishedDate | xmlDate }}" />
+{% else %}
+<meta name="dc.creator" content="{{ metadata.author.name }}" />
+{% endif %}
+<meta name="dc.language" content="{{ metadata.language }}" />
+
+{% if isEpisode %}
+<!-- Zotero / Highwire / PRISM -->
+<meta property="zotero:itemType" content="podcast" />
+{% for author in episodeAuthors %}
+<meta name="citation_author" content="{{ author | escape }}" />
+{% endfor %}
+<meta name="citation_publication_date" content="{{ publishedDate | xmlDate }}" />
+<meta name="citation_public_url" content="{{ canonicalUrl }}" />
+<meta name="citation_language" content="{{ metadata.language }}" />
+{% if doi %}
+<meta name="citation_doi" content="{{ doi | escape }}" />
+{% endif %}
+<meta name="prism.publicationName" content="The Domination Chronicles Podcast" />
+<meta name="prism.genre" content="podcast" />
+{% endif %}
 
 <!-- Icons -->
 <link rel="icon" type="image/x-icon" href="{{ metadata.favicon }}" />
@@ -36,12 +64,25 @@
 
 <!-- Additional Meta -->
 <meta name="fediverse:creator" content="@dominationchronicles@mastodon.social" />
+<meta name="atproto:handle" content="{{ metadata.atproto.handle }}" />
+<meta name="atproto:did" content="{{ metadata.atproto.did }}" />
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+<link rel="canonical" href="{{ canonicalUrl }}" />
+<link rel="me" href="{{ metadata.atproto.profile }}" />
+<link rel="me" href="{{ metadata.atproto.did_url }}" />
+{% if metadata.atproto.standard_site_publication_uri %}
+<link rel="site.standard.publication" href="{{ metadata.atproto.standard_site_publication_uri }}" />
+{% endif %}
+{% if isEpisode %}
+<link rel="site.standard.document" href="{{ atproto.uri or (metadata.atproto.did | standardDocumentUri(page.fileSlug)) }}" />
+{% endif %}
 <meta name="language" content="{{ metadata.language }}" />
 <meta name="locale" content="{{ metadata.locale }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 <link rel="alternate" type="application/atom+xml" href="/feed/feed.xml" title="{{ metadata.title }}" />
+<link rel="alternate" type="application/rss+xml" href="/feed/podcast.xml" title="{{ metadata.title }} Podcasting 2.0 Feed" />
+<link rel="alternate" type="application/xml" href="/feed/dublin-core.xml" title="{{ metadata.title }} Dublin Core XML" />
+<link rel="alternate" type="application/xml" href="/feed/doaj.xml" title="{{ metadata.title }} DOAJ XML" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
 <!-- Styles and Anchors -->

@@ -16,7 +16,8 @@
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
     "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "citations": "node scripts/generate-citations.cjs"
+    "citations": "node scripts/generate-citations.cjs",
+    "publish:atproto": "node scripts/publish-standard-site.mjs"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.1.0",
     "@11ty/font-awesome": "^1.0.1",
+    "@atproto/api": "0.20.21",
     "@zachleat/heading-anchors": "^1.0.3",
     "eleventy-plugin-youtube-embed": "^1.13.0",
     "js-yaml": "^4.1.0",

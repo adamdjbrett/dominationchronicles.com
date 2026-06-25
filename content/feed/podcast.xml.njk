@@ -1,0 +1,68 @@
+---
+permalink: /feed/podcast.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% set siteUrl = metadata.url %}
+{% set feedItems = (enrichedEpisodes or []) | reverse %}
+{% set latestItem = feedItems[0] if feedItems and feedItems | length else null %}
+{% set latestDate = latestItem.publishedAt if latestItem else "" %}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:podcast="https://podcastindex.org/namespace/1.0">
+	<channel>
+		<title>{{ metadata.title | escape }}</title>
+		<link>{{ siteUrl }}/</link>
+		<atom:link href="{{ siteUrl }}/feed/podcast.xml" rel="self" type="application/rss+xml" />
+		<description>{{ metadata.description | escape }}</description>
+		<language>{{ metadata.language or "en" }}</language>
+		<lastBuildDate>{{ latestDate | rfc822Date }}</lastBuildDate>
+		<itunes:author>Steven T. Newcomb and Peter d’Errico</itunes:author>
+		<itunes:image href="{{ metadata.image | absoluteUrl(siteUrl) }}" />
+		<podcast:locked owner="{{ metadata.author.email }}">no</podcast:locked>
+		<podcast:guid>dominationchronicles.com</podcast:guid>
+		<podcast:person role="host" href="https://stevennewcomb.com/">Steven T. Newcomb</podcast:person>
+		<podcast:person role="host" href="https://peterderrico.substack.com/">Peter d’Errico</podcast:person>
+		<podcast:txt purpose="atproto-handle">{{ metadata.atproto.handle }}</podcast:txt>
+		<podcast:txt purpose="atproto-did">{{ metadata.atproto.did }}</podcast:txt>
+		{% for post in feedItems %}
+			{% set summary = post.description | truncate(1500) %}
+			{% set tagList = post.tags or [] %}
+		<item>
+			<title>{{ post.title | escape }}</title>
+			<link>{{ post.url | escape }}</link>
+			<guid isPermaLink="true">{{ post.url | escape }}</guid>
+			<pubDate>{{ post.publishedAt | rfc822Date }}</pubDate>
+			<description>{{ summary | escape }}</description>
+			<itunes:duration>{{ post.duration | escape }}</itunes:duration>
+			<itunes:image href="{{ (post.image or metadata.image) | absoluteUrl(siteUrl) | escape }}" />
+			{% if post.audioUrl %}
+			<enclosure url="{{ post.audioUrl | escape }}" type="{{ post.audioType or "audio/mpeg" }}" length="{{ post.audioLength or 0 }}" />
+			{% endif %}
+			{% if post.transcriptUrl %}
+			<podcast:transcript url="{{ post.transcriptUrl | escape }}" type="{{ post.transcriptType or "application/pdf" }}" />
+			{% endif %}
+			{% if post.chaptersUrl %}
+			<podcast:chapters url="{{ post.chaptersUrl | absoluteUrl(siteUrl) }}" type="{{ post.chaptersType or "application/json+chapters" }}" />
+			{% endif %}
+			<podcast:person role="host" href="https://stevennewcomb.com/">Steven T. Newcomb</podcast:person>
+			<podcast:person role="host" href="https://peterderrico.substack.com/">Peter d’Errico</podcast:person>
+			{% if post.videoUrl %}
+			<podcast:alternateEnclosure type="text/html" length="0" title="YouTube video">
+				<podcast:source uri="{{ post.videoUrl | escape }}" />
+			</podcast:alternateEnclosure>
+			{% endif %}
+			{% if tagList and tagList | length %}
+				{% for tag in tagList %}
+					{% if tag and tag != "episodes" %}
+			<category>{{ tag | escape }}</category>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</item>
+		{% endfor %}
+	</channel>
+</rss>

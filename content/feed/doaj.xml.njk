@@ -1,0 +1,40 @@
+---
+permalink: /feed/doaj.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% set siteUrl = metadata.url %}
+{% set feedItems = (collections.episodes or []) | reverse %}
+<?xml version="1.0" encoding="utf-8"?>
+<records>
+{% for post in feedItems %}
+	{% set postUrl = post.url | htmlBaseUrl(siteUrl) %}
+	{% set published = post.data.publishDate or post.date %}
+	{% set summary = (post.data.description or ((post.templateContent or "") | striptags)) | stripMarkdown | truncate(1500) %}
+	{% set tagList = post.data.tags if post.data.tags is not string else [post.data.tags] %}
+	<record>
+		<language>eng</language>
+		<publisher>The Domination Chronicles Podcast</publisher>
+		<journalTitle>The Domination Chronicles Podcast</journalTitle>
+		<publicationDate>{{ published | xmlDate }}</publicationDate>
+		<publisherRecordId>{{ post.fileSlug | escape }}</publisherRecordId>
+		<documentType>audio</documentType>
+		<title language="eng">{{ post.data.title | escape }}</title>
+		<authors>
+			<author><name>Steven T. Newcomb</name></author>
+			<author><name>Peter d’Errico</name></author>
+		</authors>
+		<abstract language="eng">{{ summary | escape }}</abstract>
+		<fullTextUrl format="html">{{ postUrl }}</fullTextUrl>
+		{% if tagList and tagList | length %}
+		<keywords language="eng">
+			{% for tag in tagList %}
+				{% if tag and tag != "episodes" %}
+			<keyword>{{ tag | escape }}</keyword>
+				{% endif %}
+			{% endfor %}
+		</keywords>
+		{% endif %}
+	</record>
+{% endfor %}
+</records>

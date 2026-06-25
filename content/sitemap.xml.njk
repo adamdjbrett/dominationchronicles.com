@@ -12,4 +12,20 @@ eleventyExcludeFromCollections: true
 		<lastmod>{{ page.date | htmlDateString }}</lastmod>
 	</url>
 {%- endfor %}
+	<url>
+		<loc>{{ metadata.url }}/feed/feed.xml</loc>
+		<lastmod>{{ "now" | htmlDateString }}</lastmod>
+	</url>
+	<url>
+		<loc>{{ metadata.url }}/feed/podcast.xml</loc>
+		<lastmod>{{ "now" | htmlDateString }}</lastmod>
+	</url>
+	<url>
+		<loc>{{ metadata.url }}/feed/dublin-core.xml</loc>
+		<lastmod>{{ "now" | htmlDateString }}</lastmod>
+	</url>
+	<url>
+		<loc>{{ metadata.url }}/feed/doaj.xml</loc>
+		<lastmod>{{ "now" | htmlDateString }}</lastmod>
+	</url>
 </urlset>
