@@ -4,7 +4,7 @@
             {% set shareOpenlyHref = "https://shareopenly.org/share/?url=" + (shareUrl | urlencode) + "&text=" + (shareTitle | urlencode) %}
             <div class="row g-4">
                 <div class="p-4 rounded shadow-sm mb-4 notes-card">
-                    <a href="{{ shareOpenlyHref }}" class="btn btn-outline-primary w-100" target="_blank" rel="noopener noreferrer">ShareOpenly</a>
+                    <a href="{{ shareOpenlyHref }}" class="btn btn-outline-primary w-100" target="_blank" rel="noopener noreferrer">Share Openly</a>
                 </div>
                 {% include "partials/sidebar/episodes.njk" %}
                 {% include "partials/sidebar/menu.njk" %}
