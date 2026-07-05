@@ -1,0 +1,13 @@
+---
+permalink: /_headers
+layout: null
+eleventyExcludeFromCollections: true
+---
+{% for episodePost in collections.episodes %}{% if episodePost.url %}
+{{ episodePost.url }}
+  Link: <https://stevennewcomb.com/#person>; rel="author", <https://peterderrico.substack.com/#person>; rel="author", <{{ metadata.url }}{{ episodePost.url }}>; rel="cite-as", <https://schema.org/PodcastEpisode>; rel="type"{% if metadata.license %}, <{{ metadata.license }}>; rel="license"{% endif %}, <{{ metadata.url }}{{ episodePost.url }}metadata.json>; rel="describedby"; type="application/ld+json"; profile="https://schema.org/"
+
+{{ episodePost.url }}metadata.json
+  Content-Type: application/ld+json
+
+{% endif %}{% endfor %}

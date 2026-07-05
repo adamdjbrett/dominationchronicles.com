@@ -104,6 +104,13 @@ export default function(eleventyConfig) {
 		return Object.keys(target);
 	});
 
+	eleventyConfig.addFilter("jsonify", function jsonify(value) {
+		if (value === undefined) {
+			return "null";
+		}
+		return JSON.stringify(value);
+	});
+
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all","episodes"].indexOf(tag) === -1);
 	});

@@ -17,6 +17,8 @@
     "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
     "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "citations": "node scripts/generate-citations.cjs",
+    "citations:fair": "node scripts/add-episode-citations.mjs",
+    "citations:fair:check": "node scripts/add-episode-citations.mjs --dry-run",
     "publish:atproto": "node scripts/publish-standard-site.mjs"
   },
   "repository": {

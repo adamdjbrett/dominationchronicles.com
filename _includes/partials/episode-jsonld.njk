@@ -1,0 +1,50 @@
+{
+	"@context": "https://schema.org",
+	"@type": "PodcastEpisode",
+	"@id": {{ episode_jsonld_url | jsonify | safe }},
+	"name": {{ episode_jsonld_title | jsonify | safe }},
+	"headline": {{ episode_jsonld_title | jsonify | safe }},
+	"description": {{ episode_jsonld_description | jsonify | safe }},
+	"url": {{ episode_jsonld_url | jsonify | safe }},
+	"inLanguage": {{ (metadata.language or "en") | jsonify | safe }},
+	"datePublished": {{ episode_jsonld_date | jsonify | safe }},
+	"duration": {{ episode_jsonld_duration | jsonify | safe }},
+	"image": {{ episode_jsonld_image | jsonify | safe }},
+	"author": [
+		{
+			"@type": "Person",
+			"@id": "https://stevennewcomb.com/#person",
+			"name": "Steven T. Newcomb",
+			"url": "https://stevennewcomb.com/"
+		},
+		{
+			"@type": "Person",
+			"@id": "https://peterderrico.substack.com/#person",
+			"name": "Peter d’Errico",
+			"url": "https://peterderrico.substack.com/"
+		}
+	],
+	"publisher": {
+		"@type": "Organization",
+		"@id": {{ ((metadata.url or "https://dominationchronicles.com") ~ "/#org") | jsonify | safe }},
+		"name": "The Domination Chronicles",
+		"url": {{ ((metadata.url or "https://dominationchronicles.com") ~ "/") | jsonify | safe }}
+	},
+	"partOfSeries": {
+		"@type": "PodcastSeries",
+		"@id": {{ ((metadata.url or "https://dominationchronicles.com") ~ "/#podcast") | jsonify | safe }},
+		"name": "The Domination Chronicles",
+		"url": {{ ((metadata.url or "https://dominationchronicles.com") ~ "/") | jsonify | safe }}
+	}{% if episode_jsonld_audio %},
+	"audio": {
+		"@type": "AudioObject",
+		"url": {{ episode_jsonld_audio | jsonify | safe }}
+	}{% endif %}{% if episode_jsonld_video %},
+	"video": {
+		"@type": "VideoObject",
+		"url": {{ episode_jsonld_video | jsonify | safe }},
+		"name": {{ episode_jsonld_title | jsonify | safe }}
+	}{% endif %}{% if episode_jsonld_transcript %},
+	"transcript": {{ episode_jsonld_transcript | jsonify | safe }}{% endif %}{% if episode_jsonld_citations and episode_jsonld_citations.length %},
+	"citation": {{ episode_jsonld_citations | jsonify | safe }}{% endif %}
+}

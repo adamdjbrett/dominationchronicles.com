@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.episodes
+  size: 1
+  alias: episodePost
+permalink: "{{ episodePost.url }}metadata.json"
+layout: null
+eleventyExcludeFromCollections: true
+---
+{% set episodeData = episodePost.data %}
+{% set episode_jsonld_title = episodeData.title %}
+{% set episode_jsonld_description = episodeData.description %}
+{% set episode_jsonld_url = metadata.url ~ episodePost.url %}
+{% set episode_jsonld_date = episodeData.publishDate | xmlDate %}
+{% set episode_jsonld_duration = episodeData.duration %}
+{% set episode_jsonld_image = (episodeData.image or metadata.image) | absoluteUrl(metadata.url) %}
+{% set episode_jsonld_audio = episodeData.audioUrl or episodeData.audio %}
+{% set episode_jsonld_video = episodeData.videoUrl or (episodeData.videoId and ("https://www.youtube.com/watch?v=" ~ episodeData.videoId)) %}
+{% set episode_jsonld_transcript = episodeData.transcriptUrl %}
+{% set episode_jsonld_citations = episodeData.citations %}
+{% include "partials/episode-jsonld.njk" %}

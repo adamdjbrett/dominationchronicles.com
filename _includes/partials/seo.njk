@@ -75,6 +75,14 @@
 {% endif %}
 {% if isEpisode %}
 <link rel="site.standard.document" href="{{ atproto.uri or (metadata.atproto.did | standardDocumentUri(page.fileSlug)) }}" />
+<link rel="author" href="https://stevennewcomb.com/#person" />
+<link rel="author" href="https://peterderrico.substack.com/#person" />
+<link rel="cite-as" href="{{ canonicalUrl }}" />
+<link rel="type" href="https://schema.org/PodcastEpisode" />
+{% if metadata.license %}
+<link rel="license" href="{{ metadata.license }}" />
+{% endif %}
+<link rel="describedby" type="application/ld+json" profile="https://schema.org/" href="{{ page.url }}metadata.json" />
 {% endif %}
 <meta name="language" content="{{ metadata.language }}" />
 <meta name="locale" content="{{ metadata.locale }}" />
